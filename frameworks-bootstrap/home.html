@@ -76,7 +76,19 @@
                         <label for="contatoRarioEmailHtml">Contato por email</label>
                         <input type="radio" id="contatoRarioEmailHtml" name="contatoRarioHtml" />
                     </div>
-
+                    <div>
+                        <select name="selectEstadoHtml" id="selectEstadoHtml">
+                            <option selected>Selecione um estado</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="BH">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button type="submit">Cadastrar</button>
+                    </div>
                 </form>
             </div>
 
@@ -102,12 +114,28 @@
                     </div>
 
                     <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" class="custom-control-input" id="contatoRarioTelBoot" name="contatoRarioBoot" />
+                        <input type="radio" class="custom-control-input" id="contatoRarioTelBoot"
+                            name="contatoRarioBoot" />
                         <label class="custom-control-label" for="contatoRarioTelBoot">Contato por Telefone</label>
                     </div>
                     <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" class="custom-control-input" id="contatoRarioEmailBoot" name="contatoRarioBoot" />
+                        <input type="radio" class="custom-control-input" id="contatoRarioEmailBoot"
+                            name="contatoRarioBoot" />
                         <label class="custom-control-label" for="contatoRarioEmailBoot">Contato por email</label>
+                    </div>
+
+                    <div>
+                        <select class="custom-select" name="selectEstadoBoot" id="selectEstadoBoot">
+                            <option selected>Selecione um estado</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="BH">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button class="btn btn-primary" type="submit" style="margin-top: 5px;">Cadastrar</button>
                     </div>
 
                 </form>
