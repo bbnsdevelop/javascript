@@ -51,26 +51,40 @@
 
     <br />
     <div class="container">
-        <h1>Template com HTML5 e BootStrap</h1>
 
         <div class="row">
-            <form>
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                        else.</small>
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1">
-                </div>
-                <div class="form-group form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
+
+            <div class="col-sm">
+                <h3>Form com Html simples</h3>
+                <h2>Cadastro de cliente</h2>
+                <form method="POST" action="/" id="formHtml">
+                    <div>
+                        <label for="nomeHtml">Nome</label>
+                        <input type="text" id="nomeHtml" name="nomeHtml" />
+                    </div>
+                    <div>
+                        <label for="emailHtml">Email</label>
+                        <input type="email" id="emailHtml" name="emailHtml" />
+                    </div>
+
+                </form>
+            </div>
+
+            <div class="col-sm">
+                <h3>Form com bootstrap</h3>
+                <h2>Cadastro de cliente</h2>
+                <form method="POST" action="/" id="formBoot">
+                    <div class="form-group">
+                        <label for="nomeBoot">Nome</label>
+                        <input type="text" class="form-control" id="nomeBoot" name="nomeBoot" placeholder="Informe seu nome.">
+                    </div>
+                    <div class="form-group">
+                        <label for="emailBoot">Email</label>
+                        <input type="email" class="form-control" id="emailBoot" name="emailBoot" placeholder="Ex.: joao@gmail.com">
+                    </div>
+
+                </form>
+            </div>
         </div>
         <br />
     </div>
