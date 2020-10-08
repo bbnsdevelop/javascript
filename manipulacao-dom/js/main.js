@@ -1,3 +1,5 @@
+var selectEstadoBoot = window.document.getElementById("selectEstadoBoot");
+
 var nomeBoot = window.document.getElementById("nomeBoot");
 
 
@@ -13,4 +15,13 @@ function selecionarCampos(){
 
     console.log(`readOnly `);
     nomeBoot.readOnly = true;
+}
+
+function selecionarEstadoBoot(){
+    console.log(`object call ${Object.prototype.toString.call(selectEstadoBoot)}`);
+    console.log(`value ${ selectEstadoBoot.value }`);
+    console.log(`value ${ selectEstadoBoot.selected.Index }`);
+    selectEstadoBoot.selectedOptions
+    selectEstadoBoot.selectedOptions.item(0);
+    selectEstadoBoot.selectedOptions[1]
 }
