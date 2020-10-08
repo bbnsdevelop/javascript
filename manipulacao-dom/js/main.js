@@ -3,25 +3,32 @@ var selectEstadoBoot = window.document.getElementById("selectEstadoBoot");
 var nomeBoot = window.document.getElementById("nomeBoot");
 
 
-function selecionarCampos(){
+function selecionarCampos() {
     nomeBoot.value = "Jose";
     console.log(`typeOf ${typeof nomeBoot}`);
     console.log(`object call ${Object.prototype.toString.call(nomeBoot)}`);
-    console.log(`value ${ nomeBoot.value }`);
+    console.log(`value ${nomeBoot.value}`);
 
     //console.log(`disable `);
     //nomeBoot.disabled = true;
-
-
     console.log(`readOnly `);
     nomeBoot.readOnly = true;
 }
 
-function selecionarEstadoBoot(){
+function selecionarEstadoBoot() {
     console.log(`object call ${Object.prototype.toString.call(selectEstadoBoot)}`);
-    console.log(`value ${ selectEstadoBoot.value }`);
-    console.log(`value ${ selectEstadoBoot.selected.Index }`);
+    console.log(`value ${selectEstadoBoot.value}`);
+    console.log(`value ${selectEstadoBoot.selected.Index}`);
     selectEstadoBoot.selectedOptions
     selectEstadoBoot.selectedOptions.item(0);
     selectEstadoBoot.selectedOptions[1]
+}
+
+contatoRarioEmailBoot = document.querySelector("#contatoRarioEmailBoot");
+
+function selecionarcontatoRarioEmailBoot() {
+    console.log(`object call ${Object.prototype.toString.call(contatoRarioEmailBoot)}`);
+    console.log(`value ${contatoRarioEmailBoot.checked}`);
+    console.log(`tagName ${contatoRarioEmailBoot.tagName}`);
+    console.log(`type ${contatoRarioEmailBoot.type}`);
 }
