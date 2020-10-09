@@ -29,3 +29,6 @@ console.log(`comparacao menor ou igual é ? ${OperadorAtribuicao <= 10}`)
 console.log(`comparacao AND ? ${OperadorAtribuicao <= 10 && OperadorAtribuicao <= 10}`)
 console.log(`comparacao OR ? ${OperadorAtribuicao <= 10 || OperadorAtribuicao <= 10}`)
 console.log(`comparacao NOT ? ${!OperadorAtribuicao <= 10}`)
+
+
+console.log(`comparacao ternaria ? ${!OperadorAtribuicao <= 10 ? "Verdadeiro":"Falso"}`)
