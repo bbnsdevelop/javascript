@@ -13,8 +13,10 @@ console.log(`${divisao}`)
 let modulo = 26 % 2;
 console.log(`${modulo}`)
 
-let OperadorAtribuicao = 10;
+let exp = 2 ** 3;
+console.log(`${exp}`)
 
+let OperadorAtribuicao = 10;
 console.log(`comparacao verifica o valor é ? ${OperadorAtribuicao == "10"}`)
 console.log(`comparacao verifica o valor e o tipo é ? ${OperadorAtribuicao === "10"}`)
 console.log(`comparacao diferente valor é ? ${OperadorAtribuicao != 10}`)
@@ -24,5 +26,6 @@ console.log(`comparacao menor é ? ${OperadorAtribuicao < 10}`)
 console.log(`comparacao maior ou igual é ? ${OperadorAtribuicao >= 10}`)
 console.log(`comparacao menor ou igual é ? ${OperadorAtribuicao <= 10}`)
 
-let exp = 2 ** 3;
-console.log(`${exp}`)
+console.log(`comparacao AND ? ${OperadorAtribuicao <= 10 && OperadorAtribuicao <= 10}`)
+console.log(`comparacao OR ? ${OperadorAtribuicao <= 10 || OperadorAtribuicao <= 10}`)
+console.log(`comparacao NOT ? ${!OperadorAtribuicao <= 10}`)
