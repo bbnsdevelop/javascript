@@ -32,3 +32,12 @@ function selecionarcontatoRarioEmailBoot() {
     console.log(`tagName ${contatoRarioEmailBoot.tagName}`);
     console.log(`type ${contatoRarioEmailBoot.type}`);
 }
+
+contatoRarioBoot = document.querySelector("[name=contatoRarioBoot]");
+
+function selectorContatoRarioBoot() {
+    console.log(`object call ${Object.prototype.toString.call(contatoRarioBoot)}`);
+    console.log(`value ${contatoRarioBoot.checked}`);
+    console.log(`tagName ${contatoRarioBoot.tagName}`);
+    console.log(`type ${contatoRarioBoot.type}`);
+}
