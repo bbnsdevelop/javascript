@@ -379,6 +379,8 @@ var retornoObjetoParaJson = JSON.stringify(pessoa);
 console.log("retornoObjetoParaJson: ", retornoObjetoParaJson);
 console.log("retornoObjetoParaJson tipo?", typeof retornoObjetoParaJson);
 var formatoJson = '{"nome":"João da Silva","cpf":123456789123,"dataNascimento":"1974-04-16T03:00:00.000Z","ativo":true,"testeString":"teste string","contatos":[122345577,7621356136,3133131113],"endereco":{"rua":"Rua B","numeto":367,"cep":"620234562","pontoRef":{"ponto1":"ponto ref 1","ponto2":"ponto ref 2"}},"expressaoReg":{},"valorNull":null,"valorNaN":null,"valorInfinty":null,"valorInfintyNegativo":null,"stringVazia":""}';
+var retornoJson = JSON.parse(formatoJson);
+console.log("string to json", retornoJson);
 
 var retornoJsonParaObjeto = JSON.parse(retornoObjetoParaJson);
 console.log("retornoJsonParaObjeto tipo?", typeof retornoJsonParaObjeto);
