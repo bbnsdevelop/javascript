@@ -90,8 +90,12 @@ var obj2 = obj1;
 console.log("obj2 matrícula:", obj2.matricula);
 obj2.matricula = 28;
 
+var objt3 = new Object({matricula: obj1.matricula});
+objt3.matricula = 55;
+
 console.log("obj2 matrícula:", obj2.matricula);
 console.log("obj1 matrícula:", obj1.matricula);
+console.log("objt3 matrícula:", objt3.matricula);
 
 obj2 = null;//limpar a memoria
 console.log("tipo objeto: typeof", typeof obj1);
