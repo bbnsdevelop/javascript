@@ -270,7 +270,7 @@ console.log("3 - Object.getOwnPropertyDescriptor(objCarro, 'cor')):", Object.get
 
 console.log("4-Object.getOwnPropertyDescriptor(objCarro, 'toString')):", Object.getOwnPropertyDescriptor(objCarro, "toString"));
 console.log("5-Object.getOwnPropertyDescriptor(objCarro, 'length')):", Object.getOwnPropertyDescriptor(objCarro, "length"));
-console.log("5-Object.getOwnPropertyDescriptor(objCarro, 'placa')):", Object.getOwnPropertyDescriptor(objCarro, "placa"));
+console.log("6-Object.getOwnPropertyDescriptor(objCarro, 'placa')):", Object.getOwnPropertyDescriptor(objCarro, "placa"));
 
 var retorno = Object.getOwnPropertyDescriptor(objCarro, "marca");
 console.log(retorno)
@@ -278,12 +278,20 @@ console.log(Object.prototype.toString.call(retorno));
 
 console.log("----------------------------------------------------")
 //Travar objeto para ficar nao extensível - não permitir adicionar propriedades ao mesmo
-var objMoto = {marca: 'honda', cor:'vermelha'};
+var objMoto = {
+    marca: 'honda', 
+    cor:'vermelha'
+};
+
 console.log("Object.getOwnPropertyDescriptors(objMoto):", Object.getOwnPropertyDescriptors(objMoto));
 console.log("Object.isExtensible(objMoto)?", Object.isExtensible(objMoto));//ECMAScript 5
 console.log("Object.preventExtensions(objMoto):",Object.preventExtensions(objMoto));
 objMoto.placa = 'hfd1234';
-objMoto.ligar = function(){return "moto ligada"};
+
+objMoto.ligar = function(){
+    return "moto ligada"
+};
+
 console.log("Object.getOwnPropertyDescriptors(objMoto):", Object.getOwnPropertyDescriptors(objMoto));
 console.log("Object.isExtensible(objMoto)?", Object.isExtensible(objMoto));
 console.log("'placa' in objMoto:",'placa' in objMoto);
