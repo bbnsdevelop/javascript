@@ -41,4 +41,36 @@ console.log(b);
 console.log('removendo elementos: ',b.splice(2, 3)); // deleta um elemento de uma  posição especifica onde o primeiro parametro é a posição e o segundo quantidade de elementos
 console.log(b);
 
+console.log('--------------------------------------');
+// tornando a propriedade lenght congelada para não ocorrer a sobrescrita do tamanho do array
+// b.lenght =2 -- pratica que pode perder informações
+Object.defineProperty(b, 'length', {
+    writable: false // congela a propriedade para ser apenas de leitura
+});
+b.length = 1
+console.log(b.length);
 
+
+// tipos de for
+console.log('-----------TRABALHANDO COM FOR--------------------');
+let nomes = new Array ('Bruno', 'Tacy', 'Rafa', 'Lana', 'Tião', 'Maria', 'Jose');
+
+console.log('1 -------------------------------');
+for(let i = 0; i < nomes.length; i++){
+    console.log(nomes[i]);
+}
+
+console.log('2 -------------------------------');
+for (const key in nomes) {
+        console.log(nomes[key]);      
+}
+
+console.log('3 -------------------------------');
+for (const nome of nomes) {
+    console.log(nome);      
+}
+
+console.log('4 -------------------------------');
+nomes.forEach( n =>{
+    console.log(n);
+});
