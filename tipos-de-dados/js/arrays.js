@@ -81,3 +81,14 @@ let clientes = [ [1,2,3], ['a', 'b', 'c,']];
 console.log('---------for multidimensional----------------------');
 
 console.log(clientes[0][0]);
+
+
+let produtos = [
+    [{id: 1, nome: 'Camisa 10'}, ['Amarelo', 'Preta', 'Vermelho']],
+    [{id: 2, nome: 'Camisa 1'}, ['Amarelo', 'Preta', 'Vermelho']],
+];
+
+console.log(`Produto: ${produtos[0][0].nome} - Cores: ${produtos[0][1].toString()}`);
+
+console.log(Object.getOwnPropertyDescriptors(produtos[0][0]));
+console.log(produtos[0][1]);
