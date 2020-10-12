@@ -11,9 +11,9 @@ showArray(arrayConstrutor);
 
 // verificar se existe o index dentro do array
 
-let existe = new Boolean( 10 in arrayConstrutor);
+let existe = new Boolean(10 in arrayConstrutor);
 
-console.log(`Existe? ${ existe == true ? "Existe":"Não existe" }`);
+console.log(`Existe? ${existe == true ? "Existe" : "Não existe"}`);
 
 function showArray(array) {
     for (let i = 0; i < array.length; i++) {
@@ -21,14 +21,14 @@ function showArray(array) {
     }
 }
 
-let t = [10, 11,12,13,14];
+let t = [10, 11, 12, 13, 14];
 console.log(t);
-t.unshift(1,2,3,4,5,6,7,8,9); // adiciona na primeira posição do array
+t.unshift(1, 2, 3, 4, 5, 6, 7, 8, 9); // adiciona na primeira posição do array
 console.log(t);
 
 // remove um elemento do array
 
-let b = ['a','b', 'c','d','e', 'f', 'g', 'h'];
+let b = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
 console.log(b);
 console.log(delete b[3]); // remove porém deixa o array com o mesmo tamanho e com a posição deletada como undefined
 console.log(b);
@@ -38,7 +38,7 @@ console.log(b);
 console.log(b.splice(2, 1)); // deleta um elemento de uma  posição especifica onde o primeiro parametro é a posição e o segundo quantidade de elementos
 console.log(b);
 
-console.log('removendo elementos: ',b.splice(2, 3)); // deleta um elemento de uma  posição especifica onde o primeiro parametro é a posição e o segundo quantidade de elementos
+console.log('removendo elementos: ', b.splice(2, 3)); // deleta um elemento de uma  posição especifica onde o primeiro parametro é a posição e o segundo quantidade de elementos
 console.log(b);
 
 console.log('--------------------------------------');
@@ -53,24 +53,31 @@ console.log(b.length);
 
 // tipos de for
 console.log('-----------TRABALHANDO COM FOR--------------------');
-let nomes = new Array ('Bruno', 'Tacy', 'Rafa', 'Lana', 'Tião', 'Maria', 'Jose');
+let nomes = new Array('Bruno', 'Tacy', 'Rafa', 'Lana', 'Tião', 'Maria', 'Jose', '', undefined, true);
 
 console.log('1 -------------------------------');
-for(let i = 0; i < nomes.length; i++){
+for (let i = 0; i < nomes.length; i++) {
     console.log(nomes[i]);
 }
 
 console.log('2 -------------------------------');
 for (const key in nomes) {
-        console.log(nomes[key]);      
+    console.log(nomes[key]);
 }
 
 console.log('3 -------------------------------');
 for (const nome of nomes) {
-    console.log(nome);      
+    console.log(nome);
 }
 
 console.log('4 -------------------------------');
-nomes.forEach( n =>{
+nomes.forEach(n => {
     console.log(n);
 });
+
+let clientes = [ [1,2,3], ['a', 'b', 'c,']];
+
+
+console.log('---------for multidimensional----------------------');
+
+console.log(clientes[0][0]);
