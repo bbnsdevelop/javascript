@@ -28,4 +28,4 @@ while (count < 10) {
     count++
     console.log(`do while ${count}`);
 }
-console.log(`novo valor de count: ${count} mesmo não atendendo a condição ele entou no while`)
+console.log(`novo valor de count: ${count} mesmo não atendendo a condição ele entou no while`) 

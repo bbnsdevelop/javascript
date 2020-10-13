@@ -75,7 +75,7 @@ nomes.forEach(n => {
     console.log(n);
 });
 
-let clientes = [ [1,2,3], ['a', 'b', 'c,']];
+let clientes = [[1, 2, 3], ['a', 'b', 'c,']];
 
 
 console.log('---------for multidimensional----------------------');
@@ -84,8 +84,8 @@ console.log(clientes[0][0]);
 
 
 let produtos = [
-    [{id: 1, nome: 'Camisa 10'}, ['Amarelo', 'Preta', 'Vermelho']],
-    [{id: 2, nome: 'Camisa 1'}, ['Amarelo', 'Preta', 'Vermelho']],
+    [{ id: 1, nome: 'Camisa 10' }, ['Amarelo', 'Preta', 'Vermelho']],
+    [{ id: 2, nome: 'Camisa 1' }, ['Amarelo', 'Preta', 'Vermelho']],
 ];
 
 console.log(`Produto: ${produtos[0][0].nome} - Cores: ${produtos[0][1].toString()}`);
@@ -95,7 +95,7 @@ console.log(produtos[0][1]);
 
 console.log('---------array-join--------------------');
 
-let numeros = [1,2,3,4,5,6,7,8,9];
+let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 console.log(numeros);
 console.log(numeros.join()); // separa por vigular se não passar parâmetro
 console.log(numeros.join('-'));
@@ -104,12 +104,35 @@ console.log(numeros.join(' '));
 
 // converter en string
 
-let arrayMisto = [1,'a', true, new Date()];
+let arrayMisto = [1, 'a', true, new Date()];
 
 console.log(arrayMisto.toString());
 console.log(arrayMisto.toLocaleString('pt-BR'));
 
 console.log('---------array-metodos--------------------');
+console.log('---------array-metodos-reverse-------------------');
 // Array.reverse(), alterar a ordem dos elementos de um array - retorna o próprio array invertido
-let numeros3 = [1,2,3,4,5,6,7,8,9];
+let numeros3 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 console.log(numeros3.reverse());
+
+// Array.sort(), ordena os elementos de um array convertendo para string e ordenando conforme tabela unicode
+
+console.log('---------array-metodos-sort-------------------');
+let arrayQualquer = ['A', 'b', 'C', 'a', 1, 2, 3, 8, 6, 5, 4, 'e', 80, 9];
+let arrayQualquer2 = ['A', 'b', 'C', 'a','e','B'];
+let numeros5 = [1, 2, 3, 8, 6, 5, 4, 80, 9];
+
+console.log(arrayQualquer);
+console.log(arrayQualquer.sort());
+console.log(numeros5.sort((x, y) => { return x - y })); // função de callback com Arrow function
+console.log(arrayQualquer2.sort((x, y) => { // usando o array arrayQualquer2, pois no array arrayQualquer não é possível fazer a função toLocaleLowerCase em numeros
+    let tempX = x.toLocaleLowerCase('pt-BR');
+    let tempY = y.toLocaleLowerCase('pt-BR');
+    if (tempX < tempY) {
+        return -1;
+    } else if (tempX > tempY) {
+        return 1;
+    } else {
+        return 0;
+    }
+}));
