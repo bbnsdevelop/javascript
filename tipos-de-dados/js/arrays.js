@@ -136,3 +136,14 @@ console.log(arrayQualquer2.sort((x, y) => { // usando o array arrayQualquer2, po
         return 0;
     }
 }));
+
+
+console.log('---------array-metodos-concat-------------------');
+// Array.concat(), concatena os novos elementos passado por parâmetro com os elementos 
+// existente no array, retornando um novo array sem alterar o original
+
+let arrayOriginal = [1,2,3,4,5];
+console.log(arrayOriginal);
+console.log(arrayOriginal.concat(6,7,8,9));
+
+console.log('original: ', arrayOriginal);
