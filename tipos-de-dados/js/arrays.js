@@ -92,3 +92,19 @@ console.log(`Produto: ${produtos[0][0].nome} - Cores: ${produtos[0][1].toString(
 
 console.log(Object.getOwnPropertyDescriptors(produtos[0][0]));
 console.log(produtos[0][1]);
+
+console.log('---------array-join--------------------');
+
+let numeros = [1,2,3,4,5,6,7,8,9];
+console.log(numeros);
+console.log(numeros.join()); // separa por vigular se não passar parâmetro
+console.log(numeros.join('-'));
+console.log(numeros.join('/'));
+console.log(numeros.join(' '));
+
+// converter en string
+
+let arrayMisto = [1,'a', true, new Date()];
+
+console.log(arrayMisto.toString());
+console.log(arrayMisto.toLocaleString('pt-BR'));
