@@ -108,3 +108,8 @@ let arrayMisto = [1,'a', true, new Date()];
 
 console.log(arrayMisto.toString());
 console.log(arrayMisto.toLocaleString('pt-BR'));
+
+console.log('---------array-metodos--------------------');
+// Array.reverse(), alterar a ordem dos elementos de um array - retorna o próprio array invertido
+let numeros3 = [1,2,3,4,5,6,7,8,9];
+console.log(numeros3.reverse());
