@@ -147,3 +147,33 @@ console.log(arrayOriginal);
 console.log(arrayOriginal.concat(6,7,8,9));
 
 console.log('original: ', arrayOriginal);
+
+
+
+console.log('---------array-metodos-slice-------------------');
+// Array.slice(), método que retorna parte de um array, com base em um índice inicial e final
+// existente no array, retornando um novo array sem alterar o original
+let sliceArray = [7,2,10,4,5,6,8,9];
+console.log(sliceArray.slice(1, 3));
+console.log(sliceArray);
+console.log(sliceArray.slice(-2)); // se omitir o segundo parâmetro e deixa o priemrio negativo, entendi que seria os dois ultimos itens do array
+
+console.log('---------array-metodos-splice-------------------');
+// splice - este método permite adicionar novos elementos em um array ao mesmo tempo que remove elementos antigos
+// recebe 3 parâmetos 
+// 1 -  indeice para iniciar a inserção de novos elementos
+// 2 - qtd de elementos a serem removidos
+// 3 - os novos elementos
+// obs: o método altera o array original e retorna apenas nos elementos removidos
+
+let spliceArray = [1,2,3,4,6,8,9,true, false, 'João'];
+console.log(spliceArray)
+console.log('splice',spliceArray.splice())
+console.log(spliceArray)
+console.log('splice',spliceArray.splice(2)) // remove elementos
+console.log(spliceArray)
+console.log('splice',spliceArray.splice(3, 2)) // remove  2 elemento a partir da posição 3
+console.log(spliceArray)
+console.log('splice',spliceArray.splice(0, 0, 'A', 'B')) // adiciona os no array A e B
+console.log(spliceArray)
+
