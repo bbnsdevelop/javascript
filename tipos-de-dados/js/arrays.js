@@ -222,18 +222,15 @@ let filteNnomes = ['Maria', 'João', 'Pedro', 'José', 'Flávio', 'Marta', 'Fern
 let pares = filterArray.filter( x =>{ 
     return x % 2 === 0 ? true : false;    
 });
-console.log(pares);
 
 let impares = filterArray.filter( x =>{return x % 2 === 1 ? true : false;}).map(y =>{ return y * 2});
-console.log(impares);
-
-
 //pesquisa
-console.log('nomes', filteNnomes);
 let regExp = new RegExp("Ma", "ig");
-
 let resultadoNomes = filteNnomes.filter(n =>{ return regExp.test(n);});
 
+console.log(pares);
+console.log(impares);
+console.log('nomes', filteNnomes);
 console.log("resultado nomes pesquisa", resultadoNomes);
 console.log('nomes', filteNnomes);
 
@@ -250,16 +247,14 @@ função fornecida*/
 
 let everyarray = [2,9,5,4,3,1,0,7,6,15];
 
-console.log('números', everyarray);
-
 let retorno1 = everyarray.every( (item, indice, array) =>{
     return item < 20;
 });
-
-console.log('retorno1 ', retorno1);
 
 let retorno2 = everyarray.every((item, indice, array) =>{
     return item < 10;
 });
 
+console.log('números', everyarray);
+console.log('retorno1 ', retorno1);
 console.log('retorno2 ', retorno2);
