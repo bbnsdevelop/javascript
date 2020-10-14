@@ -177,3 +177,31 @@ console.log(spliceArray)
 console.log('splice',spliceArray.splice(0, 0, 'A', 'B')) // adiciona os no array A e B
 console.log(spliceArray)
 
+
+console.log('---------array-metodos-map-------------------');
+//ECMAScript 5
+/*Map - Este método itera por todos os elementos de um array com valores atribuídos 
+e que não sejam undefined*/
+//recebe uma função (callback) por parâmetro no qual é chamada para cada item/elemento do array
+//a função pode receber até três parâmetros 
+//1- valor - elemento array
+//2- índice do elemento
+//3- o próprio array
+/*Em cada iteração a função de callback irá retornar um valor que irá compor um novo array 
+retornado pelo map*/
+//não modifica o array original
+/*Para que o map itere no array, ele faz uma espécie de cópia temporária, caso seja adicionado 
+ou removidos item do depois do laço do map iniciar tais elementos não serão visíveis pelo map*/
+
+
+let mapArray = [1,2,3,5,9,8,7,10,50];
+
+mapArray.map( x =>{ console.log(x)});
+
+console.log("array original", mapArray);
+let mapArray2 = mapArray.map((valor, indice, mapArray) =>{ return valor * 2 });
+let mapArray2 = mapArray.map((valor) =>{ return valor * 2 });
+console.log("array novo", mapArray2);
+console.log("array original", mapArray);
+
+
