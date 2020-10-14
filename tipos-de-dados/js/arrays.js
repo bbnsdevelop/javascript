@@ -119,7 +119,7 @@ console.log(numeros3.reverse());
 
 console.log('---------array-metodos-sort-------------------');
 let arrayQualquer = ['A', 'b', 'C', 'a', 1, 2, 3, 8, 6, 5, 4, 'e', 80, 9];
-let arrayQualquer2 = ['A', 'b', 'C', 'a','e','B'];
+let arrayQualquer2 = ['A', 'b', 'C', 'a', 'e', 'B'];
 let numeros5 = [1, 2, 3, 8, 6, 5, 4, 80, 9];
 
 console.log(arrayQualquer);
@@ -142,9 +142,9 @@ console.log('---------array-metodos-concat-------------------');
 // Array.concat(), concatena os novos elementos passado por parâmetro com os elementos 
 // existente no array, retornando um novo array sem alterar o original
 
-let arrayOriginal = [1,2,3,4,5];
+let arrayOriginal = [1, 2, 3, 4, 5];
 console.log(arrayOriginal);
-console.log(arrayOriginal.concat(6,7,8,9));
+console.log(arrayOriginal.concat(6, 7, 8, 9));
 
 console.log('original: ', arrayOriginal);
 
@@ -153,7 +153,7 @@ console.log('original: ', arrayOriginal);
 console.log('---------array-metodos-slice-------------------');
 // Array.slice(), método que retorna parte de um array, com base em um índice inicial e final
 // existente no array, retornando um novo array sem alterar o original
-let sliceArray = [7,2,10,4,5,6,8,9];
+let sliceArray = [7, 2, 10, 4, 5, 6, 8, 9];
 console.log(sliceArray.slice(1, 3));
 console.log(sliceArray);
 console.log(sliceArray.slice(-2)); // se omitir o segundo parâmetro e deixa o priemrio negativo, entendi que seria os dois ultimos itens do array
@@ -166,15 +166,15 @@ console.log('---------array-metodos-splice-------------------');
 // 3 - os novos elementos
 // obs: o método altera o array original e retorna apenas nos elementos removidos
 
-let spliceArray = [1,2,3,4,6,8,9,true, false, 'João'];
+let spliceArray = [1, 2, 3, 4, 6, 8, 9, true, false, 'João'];
 console.log(spliceArray)
-console.log('splice',spliceArray.splice())
+console.log('splice', spliceArray.splice())
 console.log(spliceArray)
-console.log('splice',spliceArray.splice(2)) // remove elementos
+console.log('splice', spliceArray.splice(2)) // remove elementos
 console.log(spliceArray)
-console.log('splice',spliceArray.splice(3, 2)) // remove  2 elemento a partir da posição 3
+console.log('splice', spliceArray.splice(3, 2)) // remove  2 elemento a partir da posição 3
 console.log(spliceArray)
-console.log('splice',spliceArray.splice(0, 0, 'A', 'B')) // adiciona os no array A e B
+console.log('splice', spliceArray.splice(0, 0, 'A', 'B')) // adiciona os no array A e B
 console.log(spliceArray)
 
 
@@ -194,14 +194,45 @@ retornado pelo map*/
 ou removidos item do depois do laço do map iniciar tais elementos não serão visíveis pelo map*/
 
 
-let mapArray = [1,2,3,5,9,8,7,10,50];
+let mapArray = [1, 2, 3, 5, 9, 8, 7, 10, 50];
 
-mapArray.map( x =>{ console.log(x)});
+mapArray.map(x => { console.log(x) });
 
 console.log("array original", mapArray);
-let mapArray2 = mapArray.map((valor, indice, mapArray) =>{ return valor * 2 });
-let mapArray2 = mapArray.map((valor) =>{ return valor * 2 });
+//let mapArray2 = mapArray.map((valor, indice, mapArray) => { return valor * 2 });
+let mapArray2 = mapArray.map((valor) => { return valor * 2 });
 console.log("array novo", mapArray2);
 console.log("array original", mapArray);
 
 
+console.log('---------array-metodos-filter-------------------');
+//ECMAScript 5
+//Filter - Este método itera por todos os elementos com valores atribuídos que não seja undefined;
+//Filter retorna um novo array com base em um retorno booleano (true) de cada iteração;
+//Recebe uma função (callback) por parâmetro no qual é chamada para cada elemento do array;
+//A função pode receber até três parâmetros:
+//1- valor (elemento array)
+//2- índice do elemento no array
+//3- o próprio array
+
+
+let filterArray = [1, 2, 3, 4, 5, 6, 8, 9, 12];
+let filteNnomes = ['Maria', 'João', 'Pedro', 'José', 'Flávio', 'Marta', 'Fernanda'];
+
+let pares = filterArray.filter( x =>{ 
+    return x % 2 === 0 ? true : false;    
+});
+console.log(pares);
+
+let impares = filterArray.filter( x =>{return x % 2 === 1 ? true : false;}).map(y =>{ return y * 2});
+console.log(impares);
+
+
+//pesquisa
+console.log('nomes', filteNnomes);
+let regExp = new RegExp("Ma", "ig");
+
+let resultadoNomes = filteNnomes.filter(n =>{ return regExp.test(n);});
+
+console.log("resultado nomes pesquisa", resultadoNomes);
+console.log('nomes', filteNnomes);
