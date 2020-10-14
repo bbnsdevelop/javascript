@@ -298,11 +298,11 @@ assumira como valor inicial o valor presente no primeiro elemento da iteração;
 OBS2: ReduceRight irá fazer o mesmo que reduce, porém irá iniciar a iteração na ordem inversa 
 do array, do último elemento para o primeiro*/
 
-let testeReduce = [1,2,3,4,5];
-console.log('array', testeReduce)
+let reduceArray = [1,2,3,4,5];
+console.log('array', reduceArray)
 
 console.log('reduce-------------------');
-let retornoReduce = testeReduce.reduce( (acumulador, valorEleArray, indice, array) =>{
+let retornoReduce = reduceArray.reduce( (acumulador, valorEleArray, indice, array) =>{
     console.log('acumulador:', acumulador);
     console.log('valorEleArray:', valorEleArray);
     console.log('indice:', indice);  
@@ -313,7 +313,7 @@ console.log('retornoReduce:', retornoReduce);
 
 console.log('reduceRight-------------------');
 let valorInicial = 2;
-let retornoReduce = testeReduce.reduceRight( (acumulador, valorEleArray, indice, array) =>{
+let reduceRightArray = reduceArray.reduceRight( (acumulador, valorEleArray, indice, array) =>{
     console.log('valorInicial:', valorInicial);
     console.log('acumulador:', acumulador);
     console.log('valorEleArray:', valorEleArray);
@@ -321,5 +321,37 @@ let retornoReduce = testeReduce.reduceRight( (acumulador, valorEleArray, indice,
     console.log('>--------------------');  
     return acumulador + valorEleArray;
 },valorInicial)
-console.log('retornoReduce:', retornoReduce);
+console.log('reduceRightArray:', reduceRightArray);
+
+console.log('---------array-metodos-IndexOf-e-lastIndexOf-----------');
+// IndexOf e lastIndexOf
+// Procurando um valor especifico em um array e retornam seu índice
+
+let indexOfArray = ['maria', 'josé','fernanda', 'paulo'];
+
+console.log('array:', indexOfArray);
+
+let indexOf1 = indexOfArray.indexOf('fernanda');
+console.log('retorno1:', indexOf1);
+
+let indexOf2 = indexOfArray.indexOf('joão');
+console.log('retorno2:', indexOf2);
+
+let indexOf3 = indexOfArray.lastIndexOf('maria');
+console.log('retorno3:', indexOf3);
+
+function pesquisarNome(nome){
+    let retornoPesq = indexOfArray.indexOf(nome);
+    if(retornoPesq == -1){
+        return 'não foi encontrado';
+    }else{
+        return retornoPesq + " - " + indexOfArray[retornoPesq];
+    }
+}
+
+let indexOf4 = pesquisarNome('paulo');
+console.log('retorno4:', indexOf4);
+
+let indexOf5 = indexOfArray.indexOf('josé', 1);
+console.log('retorno5:', indexOf5);
 
