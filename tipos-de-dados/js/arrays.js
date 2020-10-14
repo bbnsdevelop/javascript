@@ -282,3 +282,44 @@ console.log('tem par?', existeNumeroPar);
 console.log('tem impar?', existeNumeroImpar);
 console.log('tem numero igual 5 ao quadrado?', existeNumeroIgual5AoQuadrado);
 
+console.log('---------array-metodos-ReduceRight-------------------');
+//ECMAScript 5
+/*Reduce/ReduceRight - Este método itera por todos os elementos de um array, tendo como objetivo 
+principal reduzir tudo a um único valor no qual será o retorno da função*/
+//Recebe uma função (callback) e um valor inicial para seu acumulador
+//A função callback recebe quatro parâmetros no qual é chamada para cada elemento do array;
+//1- Acumulador, no qual irá reter o valor oriundo do retorno de cada iteração.
+//2- valor (elemento array)
+//3- índice do elemento no array
+//4- o próprio array
+/*OBS: O valor inicial do acumulador na iteração pode ser um valor especifico que deve ser passado
+como segundo parâmetro junto a função call-back para o método recude, caso não seja informado, ele
+assumira como valor inicial o valor presente no primeiro elemento da iteração;
+OBS2: ReduceRight irá fazer o mesmo que reduce, porém irá iniciar a iteração na ordem inversa 
+do array, do último elemento para o primeiro*/
+
+let testeReduce = [1,2,3,4,5];
+console.log('array', testeReduce)
+
+console.log('reduce-------------------');
+let retornoReduce = testeReduce.reduce( (acumulador, valorEleArray, indice, array) =>{
+    console.log('acumulador:', acumulador);
+    console.log('valorEleArray:', valorEleArray);
+    console.log('indice:', indice);  
+    console.log('>--------------------');  
+    return acumulador + valorEleArray;
+},0)
+console.log('retornoReduce:', retornoReduce);
+
+console.log('reduceRight-------------------');
+let valorInicial = 2;
+let retornoReduce = testeReduce.reduceRight( (acumulador, valorEleArray, indice, array) =>{
+    console.log('valorInicial:', valorInicial);
+    console.log('acumulador:', acumulador);
+    console.log('valorEleArray:', valorEleArray);
+    console.log('indice:', indice);  
+    console.log('>--------------------');  
+    return acumulador + valorEleArray;
+},valorInicial)
+console.log('retornoReduce:', retornoReduce);
+
