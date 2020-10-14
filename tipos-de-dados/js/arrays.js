@@ -236,3 +236,30 @@ let resultadoNomes = filteNnomes.filter(n =>{ return regExp.test(n);});
 
 console.log("resultado nomes pesquisa", resultadoNomes);
 console.log('nomes', filteNnomes);
+
+console.log('---------array-metodos-every-------------------');
+//ECMAScript 5
+/*Every - Este método testa se todos os elementos do array passam pelo teste implementado pela
+função fornecida*/
+//Retorna true ou false, sendo que irá retorna true SOMENTE SE todos os teste retornarem 'true'
+//Recebe uma função (callback) por parâmetro no qual é chamada para cada elemento do array;
+//A função pode receber até três parâmetros:
+//1- valor (elemento array)
+//2- índice do elemento no array
+//3- o próprio array
+
+let everyarray = [2,9,5,4,3,1,0,7,6,15];
+
+console.log('números', everyarray);
+
+let retorno1 = everyarray.every( (item, indice, array) =>{
+    return item < 20;
+});
+
+console.log('retorno1 ', retorno1);
+
+let retorno2 = everyarray.every((item, indice, array) =>{
+    return item < 10;
+});
+
+console.log('retorno2 ', retorno2);
