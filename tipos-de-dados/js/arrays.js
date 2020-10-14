@@ -258,3 +258,27 @@ let retorno2 = everyarray.every((item, indice, array) =>{
 console.log('números', everyarray);
 console.log('retorno1 ', retorno1);
 console.log('retorno2 ', retorno2);
+
+
+console.log('---------array-metodos-some-------------------');
+//ECMAScript 5
+/*Some - Este método testa se alguns dos elementos no array passam no teste implementado pela 
+função atribuída.*/
+/*Retorna true ou false, sendo que irá retornar true SE pelo menos um elemento do array passar no
+ teste.*/
+//Recebe uma função (callback) por parâmetro no qual é chamada para cada elemento do array;
+//A função pode receber até três parâmetros:
+//1- valor (elemento array)
+//2- índice do elemento no array
+//3- o próprio array
+
+let someArray = [1,2,3,4,59,10,8,7,6,5];
+
+let existeNumeroPar = someArray.some( n =>{ return n % 2 === 0});
+let existeNumeroImpar = someArray.some( n =>{ return n % 2 === 1});
+let existeNumeroIgual5AoQuadrado = someArray.some( n =>{ return n === ( 5 * 5)});
+
+console.log('tem par?', existeNumeroPar);
+console.log('tem impar?', existeNumeroImpar);
+console.log('tem numero igual 5 ao quadrado?', existeNumeroIgual5AoQuadrado);
+
