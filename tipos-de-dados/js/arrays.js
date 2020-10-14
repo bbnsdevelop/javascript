@@ -354,4 +354,3 @@ console.log('retorno4:', indexOf4);
 
 let indexOf5 = indexOfArray.indexOf('josé', 1);
 console.log('retorno5:', indexOf5);
-
