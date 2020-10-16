@@ -62,10 +62,10 @@ var valor = 40.4;
 var cobranca = (function(vlr){
     var juros = 3.3;
     var total = (juros/100*vlr) + vlr;
-    return {total: total, juros: juros};
+    return {Propiedadetotal: total, Propiedadejuros: juros};
 })(valor);
 
 console.log("Valor: R$", valor);
-console.log("Juros: R$", cobranca.juros);
-console.log("Total: R$", cobranca.total.toFixed(2));
+console.log("Juros: R$", cobranca.Propiedadejuros);
+console.log("Total: R$", cobranca.Propiedadetotal.toFixed(2));
 console.log(cobranca);
