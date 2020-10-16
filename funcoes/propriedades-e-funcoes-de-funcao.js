@@ -31,8 +31,8 @@ calculadora.exibirOperacoesRealizadas = function(){
     console.log("####>" + calculadora.contador + " operações realizadas!");
     for(var op of calculadora.operacoes){
         var sinal = op.operacao == 'somar'? ' + ' : ' - ';
-        console.log('->>>>' + op.operacao + ":");
-        console.log('->>>>' + op.operando1  + sinal + op.operando2 + ' = ' + op.resultado);
+        console.log('----> ' + op.operacao + ":");
+        console.log('----> ' + op.operando1  + sinal + op.operando2 + ' = ' + op.resultado);
     }
 }
 
