@@ -62,3 +62,23 @@ exibirP();
 
 console.log('------------------Pessoa-Construtor-bind-----------------------')
 exibirP.bind(p)();
+
+
+console.log('------------------this-com-callback-----------------------')
+
+function passos() {
+    console.log('this em escopo de função com callback', this);
+    console.log('is true window? ', this == window); 
+    console.log('this.nome', this.nome); 
+}
+
+let pessoaCallback = {
+    nome: 'Tiãoooooooooo',
+    andar: function(callback){
+        console.log('this em escopo de objeto método callback', this);
+        console.log('is true window? ', this == window);
+        callback.call(this); // se executar callback(); apenas a função o this será de escopo window, então usa o método .call passando o this que neste momento é a função pai
+    }
+}
+
+pessoaCallback.andar(passos);
