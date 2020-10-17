@@ -29,3 +29,36 @@ function exibirNome() {
     console.log(nome)
 }
 exibirNome();
+
+
+let pessoa = {
+    nome: 'João',
+    exibirThis: function(){
+        console.log('this em escopo de objeto', this);
+        console.log('is true window? ', this == window);
+        console.log('is true pessoa? ', this == pessoa);
+    }
+}
+pessoa.exibirThis();
+
+
+console.log('------------------Pessoa-Construtor------------------------')
+
+function PessoaContrutor (n){
+    this.nome = n;
+    this.exibir = function(){
+        console.log('this em escopo de objeto contrutor', this);
+        console.log('is true window? ', this == window);
+        console.log('this.nome ', this.nome);
+    }
+}
+
+let p = new PessoaContrutor('José');
+p.exibir();
+
+let exibirP = p.exibir;
+console.log('exibir pessoa: ', exibirP);
+exibirP();
+
+console.log('------------------Pessoa-Construtor-bind-----------------------')
+exibirP.bind(p)();
