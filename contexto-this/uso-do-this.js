@@ -82,3 +82,31 @@ let pessoaCallback = {
 }
 
 pessoaCallback.andar(passos);
+
+
+console.log('------------------this-com-eventos-----------------------')
+
+let thisButton = document.getElementById('botao');
+thisButton.addEventListener('click', function(){
+    console.log('meu click thisButton', this);
+}, false)
+
+
+let Windowbutton = document.getElementById('botao');
+Windowbutton.addEventListener('click', function(){
+    console.log('meu click Windowbutton', this);
+}.apply(this), false)
+
+function Livro (){
+    this.pagina = 1;
+
+    setTimeout(function(){
+        console.log('pagina atual', this.pagina);
+    }.bind(this));
+    setInterval(() => {
+        console.log('pagina ++', this.pagina);
+        this.pagina ++;
+    }, 2000);
+}
+
+let livro = new Livro();
